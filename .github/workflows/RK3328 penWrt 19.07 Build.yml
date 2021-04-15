@@ -1,12 +1,11 @@
 name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
-  push:
-    branches: [ main ]
+  #push:
+    #branches: [ main ]
   schedule:
     - cron: '00 21 * * *'
   workflow_dispatch:
-    ref: refs/heads/main
     
 jobs:
 
