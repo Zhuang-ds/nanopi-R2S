@@ -31,6 +31,7 @@ jobs:
           sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
+      
       #- name: Setup Debug Session
       #  uses: P3TERX/debugger-action@master
   
@@ -67,7 +68,7 @@ jobs:
           git clone https://github.com/jerrykuku/luci-app-vssr.git
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+          #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
           
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
@@ -85,10 +86,10 @@ jobs:
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
           svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
           
-          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+          #svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-          git clone https://github.com/NateLol/luci-app-oled
+          #git clone https://github.com/NateLol/luci-app-oled
         
       #- name: Install Clash Binaries
         #run: |
@@ -117,7 +118,7 @@ jobs:
         run: |
           cd code/friendlywrt
           rm -rf feeds/packages/libs/libcap
-          svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+          svn co https://github.com/openwrt/openwrt/trunk/package/libs/libcap feeds/packages/libs/libcap
           
           rm -rf package/feeds/packages/netdata
           svn co https://github.com/openwrt/packages/trunk/admin/netdata package/feeds/packages/netdata
@@ -125,7 +126,7 @@ jobs:
           svn co https://github.com/coolsnowwolf/packages/trunk/libs/libnatpmp feeds/packages/libs/libnatpmp
           
           rm -rf feeds/packages/lang/luasec
-          svn co https://github.com/coolsnowwolf/packages/trunk/lang/luasec feeds/packages/lang/luasec
+          svn co https://github.com/openwrt/packages/trunk/lang/luasec feeds/packages/lang/luasec
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/runc/Makefile
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/containerd/Makefile
           
