@@ -18,7 +18,7 @@ opkg install libzstd
 ```
 然后下载脚本执行
 ```bash
-wget -qO- https://github.com/My-Compile/nanopi-R2S/raw/master/scripts/autoupdate.sh | sh
+wget -qO- https://github.com/00575/nanopi-R2S/raw/master/scripts/autoupdate.sh | sh
 ```
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -27,11 +27,11 @@ wget -qO- https://github.com/My-Compile/nanopi-R2S/raw/master/scripts/autoupdate
 ### R2S-immortalwrt-固件 终端内在线升级方法： 
 
 ```bash
-wget -qO- https://github.com/huyunlei2020/R2S/raw/master/scripts/update.sh | sh
+wget -qO- https://github.com/a0575/R2S/raw/master/scripts/update.sh | sh
 ```
 
 slim纯净版
 
 ```bash
-wget -qO- https://github.com/huyunlei2020/R2S/raw/master/scripts/update.sh | ver=-slim sh
+wget -qO- https://github.com/a0575/R2S/raw/master/scripts/update.sh | ver=-slim sh
 ```
