@@ -1,14 +1,8 @@
 name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/RK3328 penWrt 19.07 Build.yml'
-  schedule:
-    - cron: '00 21 * * *'
+  repository_dispatch:
   workflow_dispatch:
-    #ref: refs/heads/main
     
 jobs:
 
