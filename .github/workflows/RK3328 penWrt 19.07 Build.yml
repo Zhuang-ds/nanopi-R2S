@@ -8,7 +8,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -66,28 +66,28 @@ jobs:
           git clone https://github.com/jerrykuku/luci-app-vssr.git
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+          #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
           
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
+          #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
+          #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
+          #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin
           
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
-          svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
-          svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
+          #svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
+          #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
           
-          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+          #svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-          git clone https://github.com/NateLol/luci-app-oled
+          #git clone https://github.com/NateLol/luci-app-oled
         
       #- name: Install Clash Binaries
         #run: |
@@ -142,8 +142,8 @@ jobs:
           
           sed -i '/done/imkfs.ext4 /dev/mmcblk0p2 && mkdir /mnt/mmcblk0p2 && mount /dev/mmcblk0p2 /mnt/mmcblk0p2 && mkdir /mnt/mmcblk0p2/docker\n' package/base-files/files/root/setup.sh
           sed -i "/done/iblock detect | sed \"s/enabled\\\t'0'/enabled\\\t'1'/\" > /etc/config/fstab\n" package/base-files/files/root/setup.sh
-          sed -i '/done/i[ -f /etc/init.d/dockerman ] && /etc/init.d/dockerman restart\n' package/base-files/files/root/setup.sh
-          sed -i 's/\/opt\/docker/\/mnt\/mmcblk0p2\/docker/g' package/luci-app-dockerman/root/etc/config/dockerman
+          #sed -i '/done/i[ -f /etc/init.d/dockerman ] && /etc/init.d/dockerman restart\n' package/base-files/files/root/setup.sh
+          #sed -i 's/\/opt\/docker/\/mnt\/mmcblk0p2\/docker/g' package/luci-app-dockerman/root/etc/config/dockerman
           sed -i 's/\/root/\/mnt\/mmcblk0p2/g' package/luci-app-r2sflasher/root/usr/bin/rom_flash
           
       - name: Patch Kernel
