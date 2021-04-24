@@ -1,4 +1,4 @@
-name: r2s 自用
+name: my-r2s
 
 on:
   repository_dispatch:
@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
     env:
       DEVICE: r2s
 
