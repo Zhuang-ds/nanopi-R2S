@@ -1,9 +1,15 @@
 name: my-r2s
+
 on:
   repository_dispatch:
   workflow_dispatch:
-
+    inputs:
+      device:
+        description: 'select device to build'
+        default: 'r2s'
+        required: false
 jobs:
+
   build:
     runs-on: ubuntu-20.04
     env:
