@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_packages:
-    name: Build r2s
+  build:
     runs-on: ubuntu-20.04
+    if: github.event.repository.owner.id == github.event.sender.id
     env:
       DEVICE: r2s
 
