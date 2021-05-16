@@ -1,4 +1,4 @@
-name: my-r2s
+name: test-my-r2s
 
 on:
   repository_dispatch:
@@ -57,4 +57,4 @@ jobs:
           tag: ${{env.strDate}}
           file_glob: true
           overwrite: true
-          release_name: ${{env.strDate}} 自用
+          release_name: Test-${{env.strDate}}
