@@ -57,4 +57,4 @@ jobs:
           tag: ${{env.strDate}}
           file_glob: true
           overwrite: true
-          release_name: Test-${{env.strDate}}
+          release_name: test-${{env.strDate}}
