@@ -1,4 +1,4 @@
-name: test-my-r2s
+name: test-r2s
 
 on:
   repository_dispatch:
