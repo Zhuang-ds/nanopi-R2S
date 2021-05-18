@@ -1,5 +1,4 @@
 name: test-r2s
-
 on:
   repository_dispatch:
   workflow_dispatch:
