@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       DEVICE: r2s
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
 
