@@ -13,13 +13,13 @@ https://github.com/00575/nanopi-R2S/releases
 
 多插件版
 ```bash
-wget -qO- https://github.com/a0575/R2S/raw/master/scripts/update.sh | sh
+wget -qO- https://github.com/00575/Nanopi/raw/master/scripts/autoupdate.sh | sh
 ```
 
 slim纯净版
 
 ```bash
-wget -qO- https://github.com/a0575/R2S/raw/master/scripts/update.sh | ver=-slim sh
+wget -qO- https://github.com/00575/Nanopi/raw/master/scripts/autoupdate.sh | ver=-slim sh
 ```
 自用
 ```bash
